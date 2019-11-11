@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[10,9,7,8,6,5,3,4,2,1];
+      function printArr(arr, i){
+            
+            if (i<arr.length) {
+                for (var j = 0; j < arr.length; j++){ 
+                    if (arr[j+1] < arr[j]){ 
+                        var t = arr[j]; 
+                        arr[j] = arr[j+1]; 
+                        arr[j+1] = t; 
+                    }
+                }
+                printArr(arr, ++i);
+            }
+        }
+        printArr(arr,0);
+        console.log(arr);
+    </script>
+</body>
+</html>
